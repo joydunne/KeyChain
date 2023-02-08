@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+         p {background-color:white;
+            color:black}
+        #letter {background-color:white;
+            color:black}
+        .evens { border: 5px inset black;
+            background-color: white;
+            width: 50%;
+            padding: 1px;
+            margin: 20px;}
+        .odds {border: 5px inset black;
+            background-color: white;
+            width: 50%;
+            border-radius: 10px;
+            padding: 1px;
+            margin: 20px;}
+            .evens:hover {border: 5px outset hotpink}
+            .odds:hover {border: 5px outset hotpink}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KEYCHAIN</h1>
+    <h2>
+        Order Form
+    </h2>
+    <p>
+    Name: 
+    <br>
+    <input 
+        type="text" id = "customer" placeholder = "Name"> 
+        <!-- this is an input box; the "type","text", and "placeholder" are attributes -->
+    </p>
+    <p>
+        Letter:
+        <br>
+        <select id = "letter">
+            <option
+                value = "A">A
+            </option>
+            <option
+                value = "B">B
+            </option>
+            <option
+                value = "C">C
+            </option>
+            <option
+                value = "D">D
+            </option>
+        </select>
+        <!-- this created a drop down menu -->
+        <!-- saying "selected" before an option will create the default value if you don't want it to be "A" or the first option of the list -->
+    </P>
+    <P>
+        <body>
+        </body>
+        Color:
+        <br>
+        <input type="color" id = "color">
+        <br>
+        <br>
+        <button type="button" id = "bob"> Submit
+        </button>
+    </P>
+
+    <img src="" alt="">
+    <!-- save image in the same folder as your file and then put the name of the image withing the "src" attribute -->
+ </body>
+
+    <img src = "keyChain.jpeg" alt=""
+    width = "250" height = "250">
+
+ <script>
+
+    submitBut = document.getElementById("bob");
+    submitBut.addEventListener("click", recordOrder);
+
+    function recordOrder (){
+        // collect info from webpage
+        info = {}; 
+        info["name"] =  document.getElementById
+            ('name').value;
+        console.log(info);
+    }
+
+    document.getElementById("test").addEventListener('click', function(){
+        alert('hi');
+    })
+    document.getElementById("one").addEventListener('click', function (){
+        this.innerHTML = '1';
+    })
+    document.getElementById("customer").addEventListener('change', function (){
+        txt = "Hello " + this.value + "!";
+        alert(txt)
+    })
+    document.getElementById("two").addEventListener('click', function (){
+        txt = "You picked two";
+        alert(txt)
+    })
+    function loadDoc() {
+        const xhttp = new XMl
+    }
+ </script>
+</body>
+</html>

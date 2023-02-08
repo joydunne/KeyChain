@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    </head>
+        <title> 
+        <style>
+            p {background-color:bisque;
+            color:black}
+
+            #thisFootnote {background-color:antiquewhite;
+            color: blueviolet}
+
+            #letter {background-color:hotpink;
+            color:wheat}
+            
+            .evens { border: 5px inset orange;
+                background-color: chartreuse;
+                width: 50%;
+                padding: 1px;
+                margin: 20px;}
+            .odds {border: 5px inset brown;
+                background-color: coral;
+                width: 50%;
+                border-radius: 10px;
+                padding: 1px;
+                margin: 20px;}
+            .evens:hover {border: 5px outset blue}
+            .odds:hover {border: 5px outset blue}
+        </style>
+    </head>
+
+    <body>
+        <h1>KEYCHAIN</h1>
+        <h2>
+            Order Form
+        </h2>
+        <p>
+        Name: 
+        <br>
+        <input 
+            type="text" id = "customer" placeholder = "John Doe"> 
+            <!-- this is an input box; the "type","text", and "placeholder" are attributes -->
+        </p>
+        <p>
+            Letter:
+            <br>
+            <select id = "letter">
+                <option
+                    value = "A">A
+                </option>
+                <option
+                    value = "B">B
+                </option>
+                <option
+                    value = "C">C
+                </option>
+                <option
+                    value = "D">D
+                </option>
+            </select>
+            <!-- this created a drop down menu -->
+            <!-- saying "selected" before an option will create the default value if you don't want it to be "A" or the first option of the list -->
+        </P>
+
+        <P>
+            Color:
+            <br>
+            <input type="color" id = "color">
+        </P>
+
+        <img src="" alt="">
+        <!-- save image in the same folder as your file and then put the name of the image withing the "src" attribute -->
+
+        <div id = "thisFootnote">
+            This is a footnote.
+        </div>
+        <div id = "one" class = "odds">
+            One
+        </div>
+        <div id = "two" class = "evens">
+            Two
+        </div>
+        <div id = "test" class = "odds">
+            Three
+        </div>
+     </body>
+     <script>
+        document.getElementById("test").addEventListener('click', function(){
+            alert('hi');
+        })
+        document.getElementById("one").addEventListener('click', function (){
+            this.innerHTML = '1';
+        })
+        document.getElementById("customer").addEventListener('change', function (){
+            txt = "Hello " + this.value + "!";
+            alert(txt)
+        })
+        document.getElementById("two").addEventListener('click', function (){
+            txt = "You picked two";
+            alert(txt)
+        })
+     </script>
+</html>
+
+
+<!-- Color:
+            <br>
+            <select id = "color">
+                <option
+                    value = "Red">Red
+                </option>
+                <option
+                    value = "Blue">Blue
+                </option>
+                <option
+                    value = "Green">Green
+                </option>
+                <option
+                    value = "Purple">Purple
+                </option>
+            </select> -->
