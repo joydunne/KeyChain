@@ -7,6 +7,7 @@
     foreach ($_GET as $id => $val){
         echo $id . "==>" . $val . "<br>";}
 
+    echo '<button type = "button"> Input!</button>'
     $f = fopen ("test.json" , "W");
     fwrite ($f, "This is a file.");
     fclose($f);
