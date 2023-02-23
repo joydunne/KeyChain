@@ -4,21 +4,8 @@
     <style>
          p {background-color:white;
             color:black}
-        #letter {background-color:white;
+        #letter {background-color:white);
             color:black}
-        .evens { border: 5px inset black;
-            background-color: white;
-            width: 50%;
-            padding: 1px;
-            margin: 20px;}
-        .odds {border: 5px inset black;
-            background-color: white ;
-            width: 50%;
-            border-radius: 10px;
-            padding: 1px;
-            margin: 20px;}
-            .evens:hover {border: 5px outset hotpink}
-            .odds:hover {border: 5px outset hotpink}
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +40,70 @@
             <option
                 value = "D">D
             </option>
-        </select>
+            <option
+                value = "E">E
+            </option>
+            <option
+                value = "F">F
+            </option>
+            <option
+                value = "G">G
+            </option>
+            <option
+                value = "H">H
+            </option><option
+                value = "I">I
+            </option>
+            <option
+                value = "J">J
+            </option>
+            <option
+                value = "K">K
+            </option>
+            <option
+                value = "L">L
+            </option>
+            <option
+                value = "M">M
+            </option>
+            <option
+                value = "N">N
+            </option>
+            <option
+                value = "O">O
+            </option>
+            <option
+                value = "P">P
+            </option><option
+                value = "Q">Q
+            </option>
+            <option
+                value = "R">R
+            </option>
+            <option
+                value = "S">S
+            </option>
+            <option
+                value = "T">T
+            </option>
+            <option
+                value = "U">U
+            </option>
+            <option
+                value = "V">V
+            </option>
+            <option
+                value = "W">W
+            </option><option
+                value = "X">X
+            </option>
+            <option
+                value = "Y">Y
+            </option>
+            <option
+                value = "Z">Z
+            </option>
+            </select>
         <!-- this created a drop down menu -->
         <!-- saying "selected" before an option will create the default value if you don't want it to be "A" or the first option of the list -->
     </P>
@@ -62,16 +112,45 @@
         </body>
         Color:
         <br>
-        <input type="color" id = "color">
+        <input type="color" id = "color" value = "0000ff">
         <br>
         <br>
-        <button type="button" id = "bob"> Submit
-        </button>
+        <input type="button" value="Submit" id = "bob">
     </P>
 
     <img src="" alt="">
     <!-- save image in the same folder as your file and then put the name of the image withing the "src" attribute -->
  </body>
+    <canvas id="myCanvas" width = "200" height = "250" style="border:1px solid #000000;">
+        <script>
+            function drawChange (){
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "150px Arial";
+                ctx.fillStyle = document.getElementById ("color").value;
+                ctx.textAlign = "center";
+                ctx.clearRect(0,0,200,250)
+                let letter = document.getElementById ("letter").value
+                ctx.fillText(letter, 100, 170);
+                //let color = document.getElementById ("color").value
+                //ctx.fillText(color, 100, 170);
+            }
+            drawChange();
+            
+            var letter = document.getElementById("letter");
+            letter.addEventListener("change", function (){
+                console.log(this.value);
+                drawChange();
+            });
+            
+            var color = document.getElementById("color");
+            color.addEventListener("change", function (){
+                console.log(this.value);
+                drawChange();
+            });
+
+        </script>
+    </canvas>
 
     <img src = "keyChain.jpeg" alt=""
     width = "250" height = "250">
@@ -83,29 +162,20 @@
 
     function recordOrder (){
         // collect info from webpage
+
         info = {}; 
-        info["name"] =  document.getElementById
-            ('name').value;
+        info["name"] =  document.getElementById;
+        ('name').value;
         console.log(info);
     }
 
-    document.getElementById("test").addEventListener('click', function(){
-        alert('hi');
-    })
-    document.getElementById("one").addEventListener('click', function (){
-        this.innerHTML = '1';
-    })
-    document.getElementById("customer").addEventListener('change', function (){
-        txt = "Hello " + this.value + "!";
-        alert(txt)
-    })
-    document.getElementById("two").addEventListener('click', function (){
-        txt = "You picked two";
-        alert(txt)
-    })
-    function loadDoc() {
-        const xhttp = new XMl
-    }
  </script>
 </body>
+<script>
+    d.getElementById("bob").addEventListener("click", () => {
+        name = d.getElementById("name").value;
+        console.log(name);   
+    })
+
+</script>
 </html>
