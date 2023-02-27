@@ -1,8 +1,8 @@
 <?php
-    echo "Hi <em>Brooke<em>, Why are you late???";
-    echo "and you too Coen!!!<br>";
-    print_r ($_GET) . "<br>";
-    echo "Hello" . $_GET ["name"] . "<p>";
+    // echo "Hi <em>Brooke<em>, Why are you late???";
+    // echo "and you too Coen!!!<br>";
+    // print_r ($_GET) . "<br>";
+    // echo "Hello" . $_GET ["name"] . "<p>";
 
     foreach ($_GET as $id => $val){
         echo $id . "==>" . $val . "<br>";}
@@ -13,4 +13,6 @@
     fwrite($f, json_encode($_GET) . "\n");
     fclose($f);
     echo "Saved";
+
+       
 ?>

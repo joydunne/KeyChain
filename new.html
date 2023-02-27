@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <style>
-         p {background-color:white;
-            color:black}
-        #letter {background-color:white);
-            color:black}
+        body {
+            background-color: rgb(243, 238, 238);
+        }
+        input { 
+            background-color: rgb(243, 238, 238); 
+         } 
+        select {
+            background-color: rgb(243, 238, 238);
+        }
+
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +19,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>KEYCHAIN</h1>
+    <h1>Key Chains</h1>
     <h2>
         Order Form
     </h2>
@@ -155,23 +161,37 @@
     <img src = "keyChain.jpeg" alt=""
     width = "250" height = "250">
 
- <script>
+ <!-- <script>
 
     submitBut = document.getElementById("bob");
     submitBut.addEventListener("click", recordOrder);
 
     function recordOrder (){
         // collect info from webpage
-
+        url = 'text.php';
+        record = new XMLHttpRequest():
         info = {}; 
         info["name"] =  document.getElementById;
         ('name').value;
         console.log(info);
     }
-
- </script>
+  
+ </script> -->
 </body>
 <script>
+    submitBut = document.getElementById("bob");
+    submitBut.addEventListener("click", recordOrder);
+
+    function recordOrder (){
+        // collect info from webpage
+        url = 'text.php';
+        record = new XMLHttpRequest():
+        info = {}; 
+        info["name"] =  document.getElementById;
+        ('name').value;
+        console.log(info);
+    
+
     d.getElementById("bob").addEventListener("click", () => {
         name = d.getElementById("Name").value;
         console.log(name);   
@@ -183,5 +203,9 @@
         console.log(color);
     })
 
+    console.log(url)
+    record.open("GET", url, true);
+    record.send():
+}
 </script>
 </html>
