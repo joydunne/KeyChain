@@ -3,7 +3,12 @@
     // echo "and you too Coen!!!<br>";
     // print_r ($_GET) . "<br>";
     // echo "Hello" . $_GET ["name"] . "<p>";
+    // add information to my json file in my terminal, the a means "add" instead of completely replacing each time I hit submit
+    $f = fopen("orders.json", "a");
+    // writes the data to the json file
+    fwrite($f, json_encode($_GET) . "\n");
 
+fclose($f);
     foreach ($_GET as $id => $val){
         echo $id . "==>" . $val . "<br>";}
 
