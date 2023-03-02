@@ -190,7 +190,7 @@
         record = new XMLHttpRequest();
         info = {}; 
         info["name"] =  document.getElementById;
-        ('name').value;
+        //('name').value;
         console.log(info);
     
 
@@ -203,11 +203,12 @@
 
         color = document.getElementById("color").value;
         console.log(color);
+
+        console.log(url);
+        record.open("GET", url, true);
+        record.send();
     })
 
-    console.log(url)
-    record.open("GET", url, true);
-    record.send();
 }
 </script>
 </html>
