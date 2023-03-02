@@ -188,10 +188,16 @@
         // collect info from webpage
         url = 'text.php';
         record = new XMLHttpRequest();
+        record.onreadystatechange = function(){
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("server").innerHTML = console.log(this.responseText);
+            let response = JSON.parse(this.responseText);
+          }
         info = {}; 
         info["name"] =  document.getElementById;
         //('name').value;
         console.log(info);
+        }
     
 
         document.getElementById("bob").addEventListener("click", () => {
